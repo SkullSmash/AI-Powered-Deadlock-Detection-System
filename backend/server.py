@@ -44,6 +44,5 @@ def detect_deadlock():
 def get_graph():
     """API to get the graph structure for visualization."""
     return jsonify(detector.get_graph_structure()), 200
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

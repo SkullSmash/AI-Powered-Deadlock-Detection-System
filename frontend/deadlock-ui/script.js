@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Function to fetch graph data from the server
+// Function to fetch graph data from the server
 function fetchGraphData() {
-    fetch("/detect_deadlock")
+    fetch("https://scaling-waddle-4jvp6xw564427gxg-5500.app.github.dev/")  // Update API URL
         .then(response => response.json())
         .then(data => {
             updateGraph(data.graph, data.deadlock, data.cycle);
