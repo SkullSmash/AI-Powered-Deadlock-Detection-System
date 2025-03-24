@@ -1,7 +1,10 @@
 from flask import Flask, request, jsonify
 from deadlock_detector import DeadlockDetector
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 detector = DeadlockDetector()
 
 @app.route('/')
